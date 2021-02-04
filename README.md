@@ -20,7 +20,7 @@
 
 
   ## Installation
-  No installation required just deploy from the Heroku Server https://mynotetakerapp.herokuapp.com/notes
+  No installation required just deploy from the Heroku Server https://mynotetakerapp.herokuapp.com
 
   ## Usage Information
   This application is designed to input notes with a Title and text body and delete as needed.

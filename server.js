@@ -15,10 +15,6 @@ app.use(express.static("public"))
 //HTML Route
 app.get('/notes', (req, res) => {
     res.sendFile(path.join (__dirname, "/public/notes.html"))
-
-    // app.get('*', function (req, res) {
-    //     res.sendFile(path.join (__dirname, "/public/index.html"))
-    // })
 })
 
 //Api Route
@@ -59,6 +55,11 @@ app.delete("/api/notes/:id", (req, res) => {
         res.json(pushNote);
     })
 });
+
+//moved to end of page was preventing code to run
+app.get('*', function (req, res) {
+        res.sendFile(path.join (__dirname, "/public/index.html"))
+ })
 
 app.listen(PORT, function () {
     console.log("App listening to PORT " + PORT)
